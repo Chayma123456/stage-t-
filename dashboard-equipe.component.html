@@ -1,0 +1,44 @@
+<fieldset>
+
+    <canvas id="teamChart"></canvas>
+
+    <h4>Suivie des formations des collaborateurs</h4>
+    <div class="training-table">
+        <table>
+            <thead>
+                <tr >
+                    <th class="th2"></th>
+                    <th class="th2"></th>
+                    <th [attr.colspan]="getAllTrainingNames().length">
+                        Formations
+                      </th></tr>
+                <tr>
+                    <th>Nom d'utilisateur</th>
+                    <th>Employé</th>
+                    <th *ngFor="let trainingName of getAllTrainingNames()">{{ trainingName }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Iterate over each team member -->
+                <tr *ngFor="let memberData of teamMembersTrainings">
+                    <td>{{ memberData.user['username'] }}</td>
+                    <td>{{ memberData.user['prénom'] }} {{ memberData.user.nom }}</td>
+                    <!-- For each unique training, check and display the progress for this member -->
+                    <ng-container *ngIf="memberData.trainings.length > 0">
+                        <td *ngFor="let trainingName of getAllTrainingNames()">
+                            {{ getTrainingProgress(memberData.trainings, trainingName) }}
+                        </td>
+                    </ng-container>
+                    <!-- Handle case where no trainings are associated with the employee -->
+                    <ng-container *ngIf="memberData.trainings.length === 0">
+                        <td *ngFor="let _ of getAllTrainingNames()" class="no-training">_</td>
+                    </ng-container>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+   
+</fieldset>
+
+   

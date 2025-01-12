@@ -1,0 +1,88 @@
+#teamChart {
+    width: 500px;  /* Adjust width as needed */
+    height: 400px; /* Adjust height as needed */
+    display: block;
+    margin: 0 auto;
+   margin-right: 50%;
+   margin-top: 10px;
+  
+  }
+
+
+  .training-table {
+    width: 70%; /* Makes the table use the full width of its container */
+    border-collapse: collapse; /* Removes space between borders */
+    margin-top: 20px; /* Adds some space above the table */
+    background-color: #f9f9f9; /* Light background for the table */
+
+   margin-left: 0px;
+   margin-right: 40%;
+
+}
+
+.training-table table {
+    width: 100%; /* Ensures the table uses the full width */
+    border-spacing: 0; /* Removes spacing between cells */
+
+}
+
+.training-table th, .training-table td {
+    border: none; /* Light grey border for each cell */
+    padding: 8px 12px; /* Padding inside each cell */
+    text-align: center; /* Aligns text to the left */
+    font-size: 14px; /* Sets a standard font size */
+    border-collapse: collapse; /* Collapse borders */
+    border-spacing: 10; 
+    border: none;
+  
+    
+}
+
+.training-table th {
+    background-color:#6082B6; /* Green background for headers */
+    color: white; /* White text color for headers */
+    font-weight: bold; /* Makes header text bold */
+    border-collapse: collapse; /* Collapse borders */
+  border-spacing: 10; /* No spacing between borders */
+  border: none;
+}
+
+
+
+
+
+
+.training-table td {
+    background-color: #FFF; /* White background for cells */
+    color: #333; /* Darker text color for better readability */
+}
+
+.training-table .no-training {
+    color: #999; /* Lighter color for 'no training' cells */
+    font-style: italic; /* Italicize the 'no training' text */
+    text-align: center; /* Center text for 'no training' cells */
+    border-collapse: collapse; /* Collapse borders */
+    border-spacing: 10; 
+}
+
+
+fieldset{
+    margin-top: 50px;
+    margin-left: 450px;
+ 
+ border: none;
+   
+}
+
+.th2 {
+  opacity: 0;
+}
+
+h4{
+  margin-left: 110px;
+  color:	#71797E;
+  margin-top: 60px;
+  font-size:large;
+
+}
+
